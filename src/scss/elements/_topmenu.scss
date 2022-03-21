@@ -1,0 +1,79 @@
+@import "colors";
+@import "../..settings/mixins";
+header {
+  width: 100%;
+  height: 4.375rem;
+
+  box-shadow: 0 3px 6px #00000029;
+
+  .top_menu {
+    margin: 0 8.5rem 0 8.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logotop {
+      color: #08A6E4;
+      text-decoration: none;
+      font-size: 2rem;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hamburger-menu {
+      //#menu__toggle {
+      //  opacity: 0;
+      //}
+
+      //.menu__btn {
+      //  .menu__btn {
+      //    display: flex; /* используем flex для центрирования содержимого */
+      //    align-items: center; /* центрируем содержимое кнопки */
+      //    position: fixed;
+      //    top: 20px;
+      //    left: 20px;
+      //    width: 26px;
+      //    height: 26px;
+      //    cursor: pointer;
+      //    z-index: 1;
+      //  }
+      //
+      //  display: flex;
+
+        .listatop {
+          width: 30rem;
+          display: flex;
+          justify-content: space-between;
+
+          .listatopel {
+            list-style-type: none;
+            height: 4.375rem;
+            display: flex;
+            align-items: center;
+            position: static;
+            width: 4rem;
+            justify-content: center;
+
+            &:hover {
+              border-bottom: 4px solid #08A6E4;
+            }
+
+            a {
+              text-align: center;
+              font-size: 11px;
+              color: #A5A5A5;
+              text-decoration: none;
+
+              &:hover {
+                color: black;
+              }
+
+            }
+          }
+        //}
+      }
+    }
+  }
+}
+

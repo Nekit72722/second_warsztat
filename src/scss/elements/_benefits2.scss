@@ -1,0 +1,34 @@
+
+.benefits {
+  height: 1395px;
+  width: 100%;
+  background-color: $color_light-grey;
+  display: flex;
+  justify-content: center;
+
+  .benefeits_all {
+    padding: 105px 0 105px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .benefits_container {
+      //padding: 38px 71px 38px 35px;
+      border: 1px solid $color-border-gray;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1124px;
+      background-color: $color_white;
+      height: 370px;
+      @include notebook {
+
+      }
+      //@include mobile {
+      //  width: 100%;
+      //}
+
+    }
+  }
+}

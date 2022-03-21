@@ -1,0 +1,68 @@
+//main{
+//  width: 100%;
+@import "../settings/fonts";
+@import "../settings/mixins";
+  .opening{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //height: 100vh;
+    margin-top: 130px;
+    .opencontent{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      //padding-top: 3rem;
+      //height: 15.5rem;
+      .openname{
+
+       text-align: center;
+        font-size: 49px;
+        //padding-bottom: 20px;
+        font-family: $rale;
+        font-weight: 400;
+
+      }
+      .opentext{
+        font-size: 16px;
+        //padding-bottom: 30px;
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+
+      }
+
+    }
+    .openbutton{
+      font-size: 16px;
+      background: #08A6E4;
+      box-shadow: #07ACE629 5px 10px 14px;
+      width: 440px;
+      height: 67px;
+      border: none;
+      border-radius: 40px;
+      color: white;
+      @include mobile{
+        width: calc(100% - 65px);
+        margin-left: 33px;
+        margin-right: 32px;
+      }
+      //position: absolute;
+      //bottom: 120px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .openback{
+      //background-image: url(../../assets/Background.png);
+      background-color: white;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: auto;
+    }
+
+  }
+//}

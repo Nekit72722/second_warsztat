@@ -1,0 +1,132 @@
+.pricing{
+  display: flex;
+  justify-content: center;
+  .pricing_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 1266px;
+    height: 616px;
+    padding: 100px 180px 100px 220px;
+    @include mobile{
+      width: 375px;
+      height: 967px;
+      padding: 80px 18px 24px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .pricing_container_name{
+   font-family: $rale;
+    font-size: 36px;
+    font-weight: 400;
+  }
+  .pricing_container_boxes{
+    display: flex;
+    justify-content: space-between;
+    //margin: 0 100px 0 100px;
+    @include mobile{
+      width: 339px;
+      height: 967px;
+      //padding: 80px 18px 24px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pricing_container1{
+      width: 372px;
+      height: 461px;
+      margin: 113px 0 42px 0;
+      border: 1px solid $color-redish;
+      @include mobile{
+        width: calc(293px - 58px);
+        height: 251px;
+        margin-top: 20px;
+        padding: 0 11px 0 45px;
+      }
+      .pricingtop{
+        .pricingvalue{
+          color: $color_redish;
+        }
+      }
+      .begin1{
+       width: 150px;
+       height: 50px;
+        background-color: $color-redish;
+        border: none;
+        border-radius: 23px;
+        position: relative;
+        top: 25px;
+        @include mobile{
+          left: -60px;
+        }
+        a{
+          text-decoration: none;
+          color: $color-white;
+        }
+      }
+    }
+    .pricing_container2{
+      width: 405px;
+      height: 500px;
+      margin: 92px 0 24px 0;
+      border: 1px solid $color-primary;
+      @include mobile{
+        width: calc(339px - 41px);
+        height: 277px;
+        padding: 0 11px 0 28px;
+
+      }
+      .pricingtop{
+        .pricingvalue{
+          color: $color_primary;
+        }
+      }
+      .begin2{
+        width: 165px;
+        height: 50px;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 23px;
+        position: relative;
+        top: 25px;
+        a{
+          text-decoration: none;
+          color: $color-white;
+        }
+      }
+    }
+    .pricing_container3{
+      width: 372px;
+      height: 461px;
+      margin: 113px 0 42px 0;
+      border: 1px solid $color-green;
+      @include mobile{
+        width: calc(293px - 58px);
+        height: 251px;
+        margin-top: 20px;
+        padding: 0 11px 0 45px;
+      }
+      .pricingtop{
+        .pricingvalue{
+          color: $color_green;
+        }
+      }
+      .begin3{
+        width: 150px;
+        height: 50px;
+        background-color: $color-green;
+        border: none;
+        border-radius: 23px;
+        position: relative;
+        top: 25px;
+        a{
+          text-decoration: none;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

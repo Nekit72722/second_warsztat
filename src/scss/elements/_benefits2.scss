@@ -5,15 +5,27 @@
   background-color: $color_light-grey;
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  @include mobile{
+    width: 100%;
+  }
   .benefeits_all {
-    padding: 105px 0 105px 0;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    align-items: center;
+    @include notebook{
+      width: 100%;
+      padding: 0 105px 0 105px;
+    }
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
     .benefits_container {
-      //padding: 38px 71px 38px 35px;
+      margin: 38px 0 38px 35px;
       border: 1px solid $color-border-gray;
       border-radius: 5px;
       display: flex;
@@ -21,14 +33,151 @@
       align-items: center;
       width: 1124px;
       background-color: $color_white;
-      height: 370px;
-      @include notebook {
+      height: 368px;
+      @include notebook{
+        width: 100%;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+      @include mobile{
+        width: 314px;
+        height: 370px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
 
       }
-      //@include mobile {
-      //  width: 100%;
-      //}
+      .notebook_text{
+        padding: 91px 0 91px 35px;
+        width: 416px;
+        height: 188px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mobile{
+          width: 272px;
+          height: 166px;
+        }
+        .noteline{
+          width: 327px;
+          height: 1px;
+          background-color: $color_redish;
+          @include mobile{
+            display: none;
+          }
+        }
+      }
+      .notebook_logo{
+        //width: 433px;
+        //height: 294px;
+        @include mobile{
 
+        }
+        //&::before {
+        //  content: "";
+        //  width: 180px;
+        //  height: 180px;
+        //  background-color: $color-redish;
+        //  display: block;
+        //  border-radius: 40px;
+        //  position: absolute;
+        //  right: 0;
+        //  top: -40px;
+        //  transform: rotate(45deg);
+        //}
+        img{
+          width: 386px;
+          height: 219px;
+          //margin-top: 60px;
+          //margin-right: 117px;
+          @include mobile{
+            width: 192px;
+            height: 109px;
+            padding-top: 30px;
+          }
+
+        }
+
+      }
+      .benefits_phone_logo{
+       img{
+         width: 426px;
+         height: 328px;
+         @include mobile{
+           width: 175px;
+           height: 135px;
+         }
+       }
+      }
+      .benefits_phone_text{
+       width: 416px;
+        height: 230px;
+        padding: 69px 20px 71px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mobile{
+          width: 272px;
+          height: 165px;
+        }
+        .iphoneline{
+          width: 328px;
+          height: 1px;
+          background-color: $color-primary;
+          @include mobile{
+            display: none;
+          }
+        }
+      }
+    }
+    .benefits_container_glos{
+      margin: 38px 0 38px 35px;
+      width: 1124px;
+      height: 368px;
+      display: flex;
+      justify-content: space-between;
+      @include notebook{
+        width: 100%;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+      @include mobile{
+        width: 314px;
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+      }
+      .glos_text_container{
+        border: 1px solid $color-border-gray;
+        width: 623px;
+        height: 368px;
+        background-color: $color_white;
+        border-radius: 5px;
+        @include mobile{
+          width: 314px;
+          height: 346px;
+        }
+      }
+      .glos_logo{
+        border: 1px solid $color-border-gray;
+        width: 440px;
+        height: 368px;
+        background-color: $color_white;
+        border-radius: 5px;
+        @include mobile{
+          width: 314px;
+          height: 195px;
+        }
+        img{
+          width: 295px;
+          height: 207px;
+          @include mobile{
+            width: 190px;
+            height: 130px;
+          }
+        }
+      }
     }
   }
 }

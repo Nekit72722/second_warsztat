@@ -1,10 +1,120 @@
-@import "../settings/mixins";
+
 .container {
   width: 1352px;
   margin: 0 auto;
 
   @include notebook {
     width: 100%;
+    //margin: 0 15px;
+    //padding: 0 15px;
+  }
+  @include mobile {
+    width: 100%;
+    //padding: 0 5px;
+  }
+  @include tablet {
+    width: 100%;
+    //padding: 0 10px;
+  }
+}
+.contaner_benefits_base{
+
+  //width: 1352px;
+  margin: 0 auto;
+
+  @include notebook {
+    width: 100%;
+    margin: 0 15px;
     padding: 0 15px;
   }
+  @include mobile {
+    width: 100%;
+    padding: 0 5px;
+  }
+  @include tablet {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+//.benefits{
+//  @include mobile{
+//    width: 100%;
+//  }
+//  .benefeits_all{
+//    @include mobile{
+//      display: flex;
+//      flex-direction: column;
+//      align-items: center;
+//      justify-content: space-between;
+//    }
+//    .benefits_container{
+//      @include mobile{
+//        width: 314px;
+//        height: 370px;
+//      }
+//    }
+//  }
+//}
+.pricecont{
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @include mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.pricingtop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 34px;
+  .pricingname{
+    font-size: 20px;
+    font-family: $rale;
+    font-weight: bold;
+  }
+  .pricingvalue{
+    margin-top: 14px;
+    font-size: 46px;
+    font-family: $open;
+    font-weight: lighter;
+  }
+  .pricing_comment{
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: $rale;
+    font-weight: bold;
+  }
+}
+.pricing_list{
+  height: 150px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .itemyes::before{
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../../assets/Ckechmark-1.svg");
+  }
+  .itemnot::before{
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../../assets/Close.svg");
+  }
+}
+.pricing+button{
+  //@include mobile{
+  //  display: flex;
+  //}
 }

@@ -1,7 +1,363 @@
-* {
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
   box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 .header {
@@ -272,14 +628,34 @@
   background-color: #F7F7F7;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+@media (max-width: 792px) {
+  .benefits {
+    width: 100%;
+  }
 }
 .benefits .benefeits_all {
-  padding: 105px 0 105px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1352px) {
+  .benefits .benefeits_all {
+    width: 100%;
+    padding: 0 105px 0 105px;
+  }
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .benefits .benefeits_all .benefits_container {
+  margin: 38px 0 38px 35px;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
   display: flex;
@@ -287,6 +663,625 @@
   align-items: center;
   width: 1124px;
   background-color: #ffffff;
-  height: 370px;
+  height: 368px;
+}
+@media (max-width: 1352px) {
+  .benefits .benefeits_all .benefits_container {
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container {
+    width: 314px;
+    height: 370px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.benefits .benefeits_all .benefits_container .notebook_text {
+  padding: 91px 0 91px 35px;
+  width: 416px;
+  height: 188px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container .notebook_text {
+    width: 272px;
+    height: 166px;
+  }
+}
+.benefits .benefeits_all .benefits_container .notebook_text .noteline {
+  width: 327px;
+  height: 1px;
+  background-color: #FB3B64;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container .notebook_text .noteline {
+    display: none;
+  }
+}
+.benefits .benefeits_all .benefits_container .notebook_logo img {
+  width: 386px;
+  height: 219px;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container .notebook_logo img {
+    width: 192px;
+    height: 109px;
+    padding-top: 30px;
+  }
+}
+.benefits .benefeits_all .benefits_container .benefits_phone_logo img {
+  width: 426px;
+  height: 328px;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container .benefits_phone_logo img {
+    width: 175px;
+    height: 135px;
+  }
+}
+.benefits .benefeits_all .benefits_container .benefits_phone_text {
+  width: 416px;
+  height: 230px;
+  padding: 69px 20px 71px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container .benefits_phone_text {
+    width: 272px;
+    height: 165px;
+  }
+}
+.benefits .benefeits_all .benefits_container .benefits_phone_text .iphoneline {
+  width: 328px;
+  height: 1px;
+  background-color: #08A6E4;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container .benefits_phone_text .iphoneline {
+    display: none;
+  }
+}
+.benefits .benefeits_all .benefits_container_glos {
+  margin: 38px 0 38px 35px;
+  width: 1124px;
+  height: 368px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1352px) {
+  .benefits .benefeits_all .benefits_container_glos {
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container_glos {
+    width: 314px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.benefits .benefeits_all .benefits_container_glos .glos_text_container {
+  border: 1px solid #E8E9ED;
+  width: 623px;
+  height: 368px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container_glos .glos_text_container {
+    width: 314px;
+    height: 346px;
+  }
+}
+.benefits .benefeits_all .benefits_container_glos .glos_logo {
+  border: 1px solid #E8E9ED;
+  width: 440px;
+  height: 368px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container_glos .glos_logo {
+    width: 314px;
+    height: 195px;
+  }
+}
+.benefits .benefeits_all .benefits_container_glos .glos_logo img {
+  width: 295px;
+  height: 207px;
+}
+@media (max-width: 792px) {
+  .benefits .benefeits_all .benefits_container_glos .glos_logo img {
+    width: 190px;
+    height: 130px;
+  }
+}
+
+.container {
+  width: 1352px;
+  margin: 0 auto;
+}
+@media (max-width: 1352px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 792px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.contaner_benefits_base {
+  margin: 0 auto;
+}
+@media (max-width: 1352px) {
+  .contaner_benefits_base {
+    width: 100%;
+    margin: 0 15px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 792px) {
+  .contaner_benefits_base {
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .contaner_benefits_base {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.pricecont {
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 792px) {
+  .pricecont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.pricingtop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 34px;
+}
+.pricingtop .pricingname {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+.pricingtop .pricingvalue {
+  margin-top: 14px;
+  font-size: 46px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+}
+.pricingtop .pricing_comment {
+  margin-top: 10px;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.pricing_list {
+  height: 150px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pricing_list .itemyes::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../../assets/Ckechmark-1.svg");
+}
+.pricing_list .itemnot::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../../assets/Close.svg");
+}
+
+.pricing {
+  display: flex;
+  justify-content: center;
+}
+.pricing .pricing_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 1266px;
+  height: 616px;
+  padding: 100px 180px 100px 220px;
+}
+@media (max-width: 792px) {
+  .pricing .pricing_container {
+    width: 375px;
+    height: 967px;
+    padding: 80px 18px 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.pricing .pricing_container_name {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+.pricing .pricing_container_boxes {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 792px) {
+  .pricing .pricing_container_boxes {
+    width: 339px;
+    height: 967px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.pricing .pricing_container_boxes .pricing_container1 {
+  width: 372px;
+  height: 461px;
+  margin: 113px 0 42px 0;
+  border: 1px solid #FB3B64;
+}
+@media (max-width: 792px) {
+  .pricing .pricing_container_boxes .pricing_container1 {
+    width: 235px;
+    height: 251px;
+    margin-top: 20px;
+    padding: 0 11px 0 45px;
+  }
+}
+.pricing .pricing_container_boxes .pricing_container1 .pricingtop .pricingvalue {
+  color: #FB3B64;
+}
+.pricing .pricing_container_boxes .pricing_container1 .begin1 {
+  width: 150px;
+  height: 50px;
+  background-color: #FB3B64;
+  border: none;
+  border-radius: 23px;
+  position: relative;
+  top: 25px;
+}
+@media (max-width: 792px) {
+  .pricing .pricing_container_boxes .pricing_container1 .begin1 {
+    left: -60px;
+  }
+}
+.pricing .pricing_container_boxes .pricing_container1 .begin1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.pricing .pricing_container_boxes .pricing_container2 {
+  width: 405px;
+  height: 500px;
+  margin: 92px 0 24px 0;
+  border: 1px solid #08A6E4;
+}
+@media (max-width: 792px) {
+  .pricing .pricing_container_boxes .pricing_container2 {
+    width: 298px;
+    height: 277px;
+    padding: 0 11px 0 28px;
+  }
+}
+.pricing .pricing_container_boxes .pricing_container2 .pricingtop .pricingvalue {
+  color: #08A6E4;
+}
+.pricing .pricing_container_boxes .pricing_container2 .begin2 {
+  width: 165px;
+  height: 50px;
+  background-color: #08A6E4;
+  border: none;
+  border-radius: 23px;
+  position: relative;
+  top: 25px;
+}
+.pricing .pricing_container_boxes .pricing_container2 .begin2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.pricing .pricing_container_boxes .pricing_container3 {
+  width: 372px;
+  height: 461px;
+  margin: 113px 0 42px 0;
+  border: 1px solid #55DFB4;
+}
+@media (max-width: 792px) {
+  .pricing .pricing_container_boxes .pricing_container3 {
+    width: 235px;
+    height: 251px;
+    margin-top: 20px;
+    padding: 0 11px 0 45px;
+  }
+}
+.pricing .pricing_container_boxes .pricing_container3 .pricingtop .pricingvalue {
+  color: #55DFB4;
+}
+.pricing .pricing_container_boxes .pricing_container3 .begin3 {
+  width: 150px;
+  height: 50px;
+  background-color: #55DFB4;
+  border: none;
+  border-radius: 23px;
+  position: relative;
+  top: 25px;
+}
+.pricing .pricing_container_boxes .pricing_container3 .begin3 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+.contact .contact_container {
+  width: 896px;
+  height: 376px;
+  margin: 50px 365px 59px 365px;
+  display: flex;
+}
+@media (max-width: 792px) {
+  .contact .contact_container {
+    width: 316px;
+    height: 651px;
+    margin: 80px 33px 0 26px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact .contact_container .contact_left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_left {
+    width: 100%;
+  }
+}
+.contact .contact_container .contact_left .contact_left_content {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact .contact_container .contact_left .contact_left_content h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 49px;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_left .contact_left_content h2 {
+    font-size: 40px;
+  }
+}
+.contact .contact_container .contact_left .contact_left_content p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.contact .contact_container .contact_left .contact_left_content .contact_contact_gen {
+  display: flex;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_left .contact_left_content .contact_contact_gen {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.contact .contact_container .contact_left .contact_left_content .contact_contact_gen .contact_contact a {
+  text-decoration: none;
+  color: #A5A5A5;
+}
+.contact .contact_container .contact_left .contact_left_content .contact_contact_gen .contact_contact a ::before {
+  content: "";
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../../assets/MailIcon.svg");
+  position: relative;
+  top: 7px;
+}
+.contact .contact_container .contact_left .contact_left_content .contact_contact_gen .contact_contact a p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 10px;
+  padding-top: 5px;
+}
+.contact .contact_container .contact_left .contact_left_content .contact_contact_gen .contact_contact a .numer::before {
+  background-image: url("../../assets/PhoneIcon.svg");
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_left .contact_left_space {
+    display: none;
+  }
+}
+.contact .contact_container .contact_right {
+  width: 50%;
+  height: 100%;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact .contact_container .contact_right .form {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_right .form {
+    display: flex;
+    align-items: center;
+    width: 312px;
+    height: 157px;
+    margin-top: 45px;
+  }
+}
+.contact .contact_container .contact_right .form .form_name {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact_container .contact_right .form .form_name .form_label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #08A6E4;
+}
+.contact .contact_container .contact_right .form .form_email {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  height: 57px;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_right .form .form_email {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+.contact .contact_container .contact_right .form .form_email .form_label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #08A6E4;
+}
+.contact .contact_container .contact_right .form .form_email .form_input {
+  width: 340px;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_right .form .form_email .form_input {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.contact .contact_container .contact_right .form_check {
+  display: flex;
+  flex-direction: row-reverse;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #A5A5A5;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_right .form_check {
+    width: 311px;
+    height: 156px;
+  }
+}
+.contact .contact_container .contact_right .form_button {
+  width: 226px;
+  height: 57px;
+  background-color: #08A6E4;
+  color: #ffffff;
+  border-radius: 35px;
+  border: none;
+  position: relative;
+  margin-top: 20px;
+  left: 120px;
+}
+@media (max-width: 792px) {
+  .contact .contact_container .contact_right .form_button {
+    position: relative;
+    left: 45px;
+    top: 35px;
+  }
+}
+
+.form_input {
+  border: none;
+  border-bottom: 1px solid #A5A5A5;
+}
+@media (max-width: 792px) {
+  .form_input {
+    width: 308px;
+    margin-top: 15px;
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.16);
+}
+
+.footcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1352px;
+  height: 89px;
+  background-color: #ffffff;
+}
+.footcontainer .footcontent h4 {
+  font-size: 26px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #08A6E4;
+}
+.footcontainer .footcontent p {
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #A5A5A5;
+}
+.footcontainer .buttonspace .footbut {
+  background: none;
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */

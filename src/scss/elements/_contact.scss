@@ -1,0 +1,203 @@
+.contact{
+  display: flex;
+  justify-content: center;
+  .contact_container{
+    width: 896px;
+    height: 376px;
+    margin: 50px 365px 59px 365px;
+    //background-color: red;
+    display: flex;
+    @include mobile{
+      width: 316px;
+      height: 651px;
+      margin: 80px 33px 0 26px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact_left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+      @include mobile{
+        width: 100%;
+
+      }
+    .contact_left_content{
+      height: 50%;
+     display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2{
+        font-family: $rale;
+        font-weight: 400;
+        font-size: 49px;
+        @include mobile{
+          font-size: 40px;
+        }
+      }
+      p{
+        font-family: $open;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .contact_contact_gen{
+        display: flex;
+        @include mobile{
+          flex-direction: column;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        .contact_contact{
+          a{
+            text-decoration: none;
+            color: $color_grey;
+            ::before{
+              content: "";
+              width: 27px;
+              height: 27px;
+              display: inline-block;
+              margin-right: 10px;
+              background-image: url("../../assets/MailIcon.svg");
+              position: relative;
+              top: 7px;
+            }
+            p{
+              font-family: $open;
+              font-weight: 600;
+              font-size: 16px;
+              margin-right: 10px;
+              padding-top: 5px;
+            }
+            .numer::before{
+              background-image: url("../../assets/PhoneIcon.svg");
+            }
+          }
+        }
+      }
+    }
+    .contact_left_space{
+      @include mobile{
+        display: none;
+      }
+    }
+  }
+    .contact_right{
+      width: 50%;
+      height: 100%;
+      @include mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form{
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mobile{
+          display: flex;
+          align-items: center;
+          width: 312px;
+          height: 157px;
+          margin-top: 45px;
+
+        }
+        .form_name {
+          display: flex;
+          flex-direction: column;
+          .form_label {
+            font-family: $open;
+            font-weight: bold;
+            font-size: 11px;
+            color: $color-primary;
+          }
+        }
+        .form_email{
+          display: flex;
+          flex-direction: column;
+          width: 440px;
+          height: 57px;
+
+          @include mobile{
+            width: 100%;
+            margin-bottom: 25px;
+          }
+          .form_label {
+            font-family: $open;
+            font-weight: bold;
+            font-size: 11px;
+            color: $color-primary;
+          }
+          .form_input{
+           width: 340px;
+            @include mobile{
+              width: 100%;
+              padding-right: 0;
+              padding-left: 0;
+            }
+          }
+        }
+
+      }
+      .form_check{
+        display: flex;
+        flex-direction: row-reverse;
+        user-select: none;
+        font-size: 12px;
+        font-family: $open;
+        color: $color-grey;
+        @include mobile{
+          width: 311px;
+          height: 156px;
+
+        }
+
+        .checkbox_check{
+          //width: 24px;
+          //height: 24px;
+          //opacity: 0;
+          //height: 0;
+          //width: 0;
+          .checkbox{
+            //height: 24px;
+            //width: 24px;
+            //background-color: #eec321;
+          }
+
+        }
+      }
+      .form_button{
+        width: 226px;
+        height: 57px;
+        background-color: $color_primary;
+        color: $color_white;
+        border-radius: 35px;
+        border: none;
+        position: relative;
+        margin-top: 20px;
+        left: 120px;
+
+        @include mobile{
+          position: relative;
+          left: 45px;
+          top: 35px;
+        }
+      }
+    }
+  }
+}
+
+.form_input{
+  border: none;
+  border-bottom: 1px solid $color-grey;
+  @include mobile{
+    width: 308px;
+    margin-top: 15px;
+  }
+}
+//#email{
+//  position: relative;
+//  right: 80px;
+//}

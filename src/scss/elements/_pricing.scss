@@ -8,7 +8,7 @@
     justify-content: space-between;
     width: 1266px;
     height: 616px;
-    padding: 100px 180px 100px 220px;
+    padding: 100px 0 100px 0;
     @include mobile{
       width: 375px;
       height: 967px;
@@ -38,13 +38,14 @@
     .pricing_container1{
       width: 372px;
       height: 461px;
-      margin: 113px 0 42px 0;
+      margin: 113px 58px 42px 0;
       border: 1px solid $color-redish;
       @include mobile{
         width: calc(293px - 58px);
         height: 251px;
         margin-top: 20px;
         padding: 0 11px 0 45px;
+        margin-right: 0;
       }
       .pricingtop{
         .pricingvalue{
@@ -71,12 +72,13 @@
     .pricing_container2{
       width: 405px;
       height: 500px;
-      margin: 92px 0 24px 0;
+      margin: 92px 58px 24px 0;
       border: 1px solid $color-primary;
       @include mobile{
         width: calc(339px - 41px);
         height: 277px;
         padding: 0 11px 0 28px;
+        margin-right: 0;
 
       }
       .pricingtop{

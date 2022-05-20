@@ -107,11 +107,22 @@
         .form_name {
           display: flex;
           flex-direction: column;
+          @include mobile{
+            width: 100%;
+          }
           .form_label {
             font-family: $open;
             font-weight: bold;
             font-size: 11px;
             color: $color-primary;
+          }
+          .form_input{
+            width: 340px;
+            @include mobile{
+              width: 100%;
+              padding-right: 0;
+              padding-left: 0;
+            }
           }
         }
         .form_email{
@@ -188,15 +199,16 @@
     }
   }
 }
-
-.form_input{
+//
+.form_input {
   border: none;
   border-bottom: 1px solid $color-grey;
-  @include mobile{
-    width: 308px;
+  @include mobile {
+    //width: 308px;
     margin-top: 15px;
   }
 }
+//}
 //#email{
 //  position: relative;
 //  right: 80px;

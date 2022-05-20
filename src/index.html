@@ -74,7 +74,7 @@
         </div>
     </section>
     <section class="benefits">
-        <div class="benefeits_all ">
+        <div class="benefeits_all testcontainer">
 
             <div class="benefits_container">
                 <div class="notebook_text">
@@ -174,6 +174,73 @@
             </div>
         </div>
     </section>
+    <section class="calc">
+        <h2>Calculate how much you’ll pay</h2>
+
+        <div class="calc__columns">
+            <form class="calc__form">
+                <div class="calc__input">
+                    <input type="number" class="form__input" id="productsInput" min="1" step="1" placeholder="Products quantity"/>
+                </div>
+                <div class="calc__input">
+                    <input type="number" class="form__input" id="ordersInput" min="1" step="1" placeholder="Estimated orders in month"/>
+                </div>
+                <div class="calc__select" id="package" data-value="">
+                    <div class="select__input">
+                        Choose package
+                    </div>
+
+                    <ul class="select__dropdown">
+                        <li data-value="basic">Basic</li>
+                        <li data-value="professional">Professional</li>
+                        <li data-value="premium">Premium</li>
+                    </ul>
+                </div>
+                <label class="form__checkbox">
+                    <input type="checkbox" id="accountingCheck"/>
+                    <span class="checkbox"></span>
+                    <p class="consent__text">Accounting</p>
+                </label>
+                <label class="form__checkbox">
+                    <input type="checkbox" id="terminalCheck"/>
+                    <span class="checkbox"></span>
+                    <p class="consent__text">Rental of a payment terminal</p>
+                </label>
+            </form>
+
+            <div class="calc__summary">
+                <ul>
+                    <li class="list__item" data-id="products">
+                        <span class="item__type">Products</span>
+                        <span class="item__calc_products">0.5$ for 1</span>
+                        <span class="item__price_products">$0</span>
+                    </li>
+                    <li class="list__item" data-id="orders">
+                        <span class="item__type">Orders</span>
+                        <span class="item__calc_orders">20 * $0.25</span>
+                        <span class="item__price_orders">$10</span>
+                    </li>
+                    <li class="list__item" data-id="package">
+                        <span class="item__type">Package</span>
+                        <span class="item__calc">Premium</span>
+                        <span class="item__price">$10</span>
+                    </li>
+                    <li class="list__item" data-id="accounting">
+                        <span class="item__type">Accounting</span>
+                        <span class="item__priceAcc">$0</span>
+                    </li>
+                    <li class="list__item" data-id="terminal">
+                        <span class="item__type">Terminal</span>
+                        <span class="item__priceTer">$10</span>
+                    </li>
+                </ul>
+                <div class="summary__total" id="total-price">
+                    <span>Total</span>
+                    <span class="total__price">$700</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="contact">
         <div class="contact_container">
             <div class="contact_left">
@@ -237,6 +304,7 @@
         </div>
      </div>
 </footer>
+<script src="js/test.js"></script>
 
 </body>
 </html>
